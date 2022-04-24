@@ -5,9 +5,9 @@ from app.main.forms import SearchForm
 
 
 # routes are created with main blueprint, otherwise it won't work
-@main.route("/")
-@main.route("/home")
-@main.route("/index")
+@main.route("/", methods=["GET", "POST"])
+@main.route("/home", methods=["GET", "POST"])
+@main.route("/index", methods=["GET", "POST"])
 def home():
     form = SearchForm()
 
