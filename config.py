@@ -11,6 +11,10 @@ class BaseConfig:
     SECRET_KEY = os.environ.get("WEATHER_APP_SECRET_KEY") or "hard_to_guess_string"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    @staticmethod
+    def init_app(app):
+        pass
+
 
 class DevelopmentConfig(BaseConfig):
     """Config that will be used during development. So, debugging is enabled."""
